@@ -15,6 +15,8 @@ public class FizzBuzz {
         String ret = String.valueOf(num);
         if (num % FizzBuzzNumber.FIZZ == 0) {
             ret = "Fizz";
+        } else if (num % FizzBuzzNumber.Buzz == 0) {
+            ret = "Buzz";
         }
         return ret;
     }
