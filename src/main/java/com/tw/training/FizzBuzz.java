@@ -7,12 +7,17 @@ interface FizzBuzzNumber {
 }
 
 public class FizzBuzz {
+
     private String Fizz = String.valueOf(FizzBuzzNumber.FIZZ);
     private String Buzz = String.valueOf(FizzBuzzNumber.BUZZ);
     private String Whizz = String.valueOf(FizzBuzzNumber.WHIZZ);
 
     public static void main(String []args) {
-        System.out.println("hello world");
+        for (int i = 1; i <= Integer.valueOf(args[0]); i++) {
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            String ret = fizzBuzz.fizzBuzz(i);
+            System.out.println(ret);
+        }
     }
 
     public String fizzBuzz(Integer num) {
