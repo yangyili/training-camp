@@ -23,12 +23,14 @@ public class FizzBuzzTest {
         String num_73 = fizzBuzz.fizzBuzz(73);
         String num_75 = fizzBuzz.fizzBuzz(75);
         String num_630 = fizzBuzz.fizzBuzz(630);
+        String num_735 = fizzBuzz.fizzBuzz(735);
         assertEquals("3 is Fizz", "Fizz", num_3);
         assertEquals("13 is Fizz", "Fizz", num_13);
         assertEquals("30 is Fizz", "Fizz", num_30);
         assertEquals("73 is Fizz", "Fizz", num_73);
         assertEquals("75 is Fizz", "Fizz", num_75);
         assertEquals("630 is Fizz", "Fizz", num_630);
+        assertEquals("735 is Fizz", "Fizz", num_735);
     }
 
     @Test
@@ -66,9 +68,7 @@ public class FizzBuzzTest {
     @Test
     public void assertFizzWhizzNumber() {
         String num_21 = fizzBuzz.fizzBuzz(21);
-        String num_735 = fizzBuzz.fizzBuzz(735);
         assertEquals("21 is FizzWhizz", "FizzWhizz", num_21);
-        assertEquals("735 is FizzWhizz", "FizzWhizz", num_735);
     }
 
     @Test
@@ -80,10 +80,10 @@ public class FizzBuzzTest {
     @Test
     public void assertNormalNumber() {
         String num_2 = fizzBuzz.fizzBuzz(2);
-        String num_11 = fizzBuzz.fizzBuzz(11);
+        String num_16 = fizzBuzz.fizzBuzz(16);
         String num_19 = fizzBuzz.fizzBuzz(19);
         assertEquals("2 is 2", "2", num_2);
-        assertEquals("11 is 11", "11", num_11);
+        assertEquals("16 is 16", "16", num_16);
         assertEquals("19 is 19", "19", num_19);
     }
 }
