@@ -13,7 +13,15 @@ public class FizzBuzz {
     private String Whizz = String.valueOf(FizzBuzzNumber.WHIZZ);
 
     public static void main(String []args) {
-        for (int i = 1; i <= Integer.valueOf(args[0]); i++) {
+        Integer start = 1;
+        Integer end = 100;
+        if (args.length > 0) {
+            start = Integer.valueOf(args[0]);
+        }
+        if (args.length > 1) {
+            end = Integer.valueOf(args[1]);
+        }
+        for (int i = start; i <= end; i++) {
             FizzBuzz fizzBuzz = new FizzBuzz();
             String ret = fizzBuzz.fizzBuzz(i);
             System.out.println(ret);
@@ -21,6 +29,9 @@ public class FizzBuzz {
     }
 
     public String fizzBuzz(Integer num) {
+        if (num <= 0) {
+            return "please input positive integer number";
+        }
         String ret = String.valueOf(num);
         if (ret.indexOf(Whizz) != -1) {
             if (ret.indexOf(Fizz) != -1) {

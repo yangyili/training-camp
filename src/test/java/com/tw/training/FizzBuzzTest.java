@@ -86,4 +86,12 @@ public class FizzBuzzTest {
         assertEquals("16 is 16", "16", num_16);
         assertEquals("19 is 19", "19", num_19);
     }
+
+    @Test
+    public void assertExceptionNumber() {
+        String num_0 = fizzBuzz.fizzBuzz(0);
+        String num_negative_5 = fizzBuzz.fizzBuzz(-5);
+        assertEquals("0 is Exception", "please input positive integer number", num_0);
+        assertEquals("-5 is Exception", "please input positive integer number", num_negative_5);
+    }
 }
