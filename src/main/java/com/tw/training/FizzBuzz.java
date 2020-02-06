@@ -36,40 +36,43 @@ public class FizzBuzz {
         if (ret.indexOf(Whizz) != -1) {
             if (ret.indexOf(Fizz) != -1) {
                 ret = "Fizz";
-            } else if (num % (FizzBuzzNumber.FIZZ * FizzBuzzNumber.WHIZZ) == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.FIZZ * FizzBuzzNumber.WHIZZ)) {
                 ret = "FizzWhizz";
-            } else if (num % FizzBuzzNumber.FIZZ == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.FIZZ)) {
                 ret = "Fizz";
-            } else if (num % FizzBuzzNumber.WHIZZ == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.WHIZZ)) {
                 ret = "Whizz";
             }
         } else if (ret.indexOf(Buzz) != -1) {
-            if (num % (FizzBuzzNumber.BUZZ * FizzBuzzNumber.WHIZZ) == 0) {
+            if (exactDivision(num, FizzBuzzNumber.BUZZ * FizzBuzzNumber.WHIZZ)) {
                 ret = "BuzzWhizz";
-            } else if (num % FizzBuzzNumber.BUZZ == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.BUZZ)) {
                 ret = "Buzz";
-            } else if (num % FizzBuzzNumber.WHIZZ == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.WHIZZ)) {
                 ret = "Whizz";
             }
         } else {
             if (ret.indexOf(Fizz) != -1) {
                 ret = "Fizz";
-            } else if (num % (FizzBuzzNumber.FIZZ * FizzBuzzNumber.BUZZ * FizzBuzzNumber.WHIZZ) == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.FIZZ * FizzBuzzNumber.BUZZ * FizzBuzzNumber.WHIZZ)) {
                 ret = "FizzBuzzWhizz";
-            } else if (num % (FizzBuzzNumber.FIZZ * FizzBuzzNumber.BUZZ) == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.FIZZ * FizzBuzzNumber.BUZZ)) {
                 ret = "FizzBuzz";
-            } else if (num % (FizzBuzzNumber.FIZZ * FizzBuzzNumber.WHIZZ) == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.FIZZ * FizzBuzzNumber.WHIZZ)) {
                 ret = "FizzWhizz";
-            } else if(num % (FizzBuzzNumber.BUZZ * FizzBuzzNumber.WHIZZ) == 0) {
+            } else if(exactDivision(num, FizzBuzzNumber.BUZZ * FizzBuzzNumber.WHIZZ)) {
                 ret = "BuzzWhizz";
-            } else if (num % FizzBuzzNumber.FIZZ == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.FIZZ)) {
                 ret = "Fizz";
-            } else if (num % FizzBuzzNumber.BUZZ == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.BUZZ)) {
                 ret = "Buzz";
-            } else if (num % FizzBuzzNumber.WHIZZ == 0) {
+            } else if (exactDivision(num, FizzBuzzNumber.WHIZZ)) {
                 ret = "Whizz";
             }
         }
         return ret;
+    }
+    private boolean exactDivision(Integer dividend, Integer divisor) {
+        return dividend % divisor == 0;
     }
 }
